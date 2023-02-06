@@ -23,23 +23,19 @@ then activate the virtualenv with below command:
 
 ```source .env/bin/activate```
 
-now you should install the requirements
+now, you should install the requirements
 
 ```pip install -r requirements.txt```
 
-for the last step, you should create .env file alongside core/settings.py.
+then, you should create .env file alongside core/settings.py.
 
 you can find the sample in .envsample file.
 
-migrate changes on DB to create log table
+migrate changes on DB to create log table:
 
 ```python manage.py migrate```
 
-create superuser to see the persisted logs in django admin
-
-```python manage.py createsupseuser```
-
-startup the celery with this command
+startup the celery with this command:
 
 ```celery -A core worker -E -l info -B -c 3```
 
